@@ -1,0 +1,1 @@
+docker-compose -p sonya5-java down

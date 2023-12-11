@@ -1,0 +1,202 @@
+﻿{
+  "name": "IISSonya5РасходДенег",
+  "modelName": "i-i-s-sonya5-расход-денег",
+  "className": "РасходДенег",
+  "nameSpace": "IIS.Sonya5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "iD",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "банк",
+      "type": "i-i-s-sonya5-банк",
+      "flexberryType": "Банк",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "бИК",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "иНН",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "счет",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "поставщики",
+      "relatedTo": "i-i-s-sonya5-поставщики",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "составМатериалы",
+      "relatedTo": "i-i-s-sonya5-состав-материалы",
+      "inverse": "расходДенег"
+    }
+  ],
+  "projections": [
+    {
+      "name": "РасходДенегE",
+      "modelName": "i-i-s-sonya5-расход-денег",
+      "attrs": [
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "банк",
+          "caption": "Банк",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "счет",
+          "caption": "Счет",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "иНН",
+          "caption": "ИНН",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "бИК",
+          "caption": "БИК",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "СоставМатериалыE",
+          "caption": "Состав материалы",
+          "name": "составМатериалы",
+          "relatedTo": "i-i-s-sonya5-состав-материалы",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РасходДенегL",
+      "modelName": "i-i-s-sonya5-расход-денег",
+      "attrs": [
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "банк",
+          "caption": "Банк",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "счет",
+          "caption": "Счет",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "иНН",
+          "caption": "ИНН",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "бИК",
+          "caption": "БИК",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

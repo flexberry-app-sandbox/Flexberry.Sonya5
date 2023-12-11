@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Услуги",
+  "name": "IISSonya5УслугиE",
+  "className": "УслугиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sonya5-услуги",
+      "modelProjection": "УслугиE"
+    }
+  ]
+}

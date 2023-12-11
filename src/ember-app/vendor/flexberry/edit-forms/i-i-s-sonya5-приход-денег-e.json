@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Приход денег",
+  "name": "IISSonya5ПриходДенегE",
+  "className": "ПриходДенегE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sonya5-приход-денег",
+      "modelProjection": "ПриходДенегE"
+    }
+  ]
+}

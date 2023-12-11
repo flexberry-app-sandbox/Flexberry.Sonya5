@@ -1,0 +1,96 @@
+<h3 class="ui header">{{t "forms.i-i-s-sonya5-приход-денег-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.iD
+      class=(if (v-get validationModel "iD" "isInvalid") "error")
+      label=(t "forms.i-i-s-sonya5-приход-денег-e.iD-caption")
+      data-test-i-i-s-sonya5-приход-денег-e-iD=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "iD" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sonya5-приход-денег-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-sonya5-приход-денег-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-sonya5-приход-денег-e-типПрихода="true">
+    <label>{{t "forms.i-i-s-sonya5-приход-денег-e.типПрихода-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-sonya5-тип-прихода")
+      value=model.типПрихода
+      class=(if (v-get validationModel "типПрихода" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "типПрихода" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.сумма
+      class=(if (v-get validationModel "сумма" "isInvalid") "error")
+      label=(t "forms.i-i-s-sonya5-приход-денег-e.сумма-caption")
+      data-test-i-i-s-sonya5-приход-денег-e-сумма=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сумма" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sonya5-приход-денег-e.составУслуги-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="составУслугиGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.составУслуги
+      content=model.составУслуги
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "составУслуги" "isInvalid") "error")
+      data-test-i-i-s-sonya5-приход-денег-e-составУслуги=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "составУслуги" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sonya5-приход-денег-e.составТовары-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="составТоварыGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.составТовары
+      content=model.составТовары
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "составТовары" "isInvalid") "error")
+      data-test-i-i-s-sonya5-приход-денег-e-составТовары=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "составТовары" "message")}}
+  </div>
+</form>

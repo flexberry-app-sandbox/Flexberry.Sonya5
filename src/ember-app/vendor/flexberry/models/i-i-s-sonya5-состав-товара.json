@@ -1,0 +1,69 @@
+﻿{
+  "name": "IISSonya5СоставТовара",
+  "modelName": "i-i-s-sonya5-состав-товара",
+  "className": "СоставТовара",
+  "nameSpace": "IIS.Sonya5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "материалы",
+      "relatedTo": "i-i-s-sonya5-материалы",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "товары",
+      "relatedTo": "i-i-s-sonya5-товары",
+      "inverse": "составТовара"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СоставТовараE",
+      "modelName": "i-i-s-sonya5-состав-товара",
+      "attrs": [
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "СоставТовараL",
+      "modelName": "i-i-s-sonya5-состав-товара",
+      "attrs": [
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

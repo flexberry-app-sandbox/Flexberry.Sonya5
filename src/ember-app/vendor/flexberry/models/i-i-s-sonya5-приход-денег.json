@@ -1,0 +1,151 @@
+﻿{
+  "name": "IISSonya5ПриходДенег",
+  "modelName": "i-i-s-sonya5-приход-денег",
+  "className": "ПриходДенег",
+  "nameSpace": "IIS.Sonya5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "iD",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типПрихода",
+      "type": "i-i-s-sonya5-тип-прихода",
+      "flexberryType": "ТипПрихода",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиенты",
+      "relatedTo": "i-i-s-sonya5-клиенты",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "составУслуги",
+      "relatedTo": "i-i-s-sonya5-состав-услуги",
+      "inverse": "приходДенег"
+    },
+    {
+      "name": "составТовары",
+      "relatedTo": "i-i-s-sonya5-состав-товары",
+      "inverse": "приходДенег"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПриходДенегE",
+      "modelName": "i-i-s-sonya5-приход-денег",
+      "attrs": [
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "типПрихода",
+          "caption": "Тип прихода",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "СоставУслугиE",
+          "caption": "Состав услуги",
+          "name": "составУслуги",
+          "relatedTo": "i-i-s-sonya5-состав-услуги",
+          "inverse": null
+        },
+        {
+          "projectionName": "СоставТоварыE",
+          "caption": "Состав товары",
+          "name": "составТовары",
+          "relatedTo": "i-i-s-sonya5-состав-товары",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПриходДенегL",
+      "modelName": "i-i-s-sonya5-приход-денег",
+      "attrs": [
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "типПрихода",
+          "caption": "Тип прихода",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

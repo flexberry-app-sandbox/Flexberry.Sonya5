@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistencehttp://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="Olingo4PG">
+        <class>Sonya5.model.Klienty</class>
+        <class>Sonya5.model.Postavshhiki</class>
+        <class>Sonya5.model.Registr</class>
+        <class>Sonya5.model.Tovary</class>
+        <class>Sonya5.model.SostavTovara</class>
+        <class>Sonya5.model.PrixodDeneg</class>
+        <class>Sonya5.model.Uslugi</class>
+        <class>Sonya5.model.SostavUslugi</class>
+        <class>Sonya5.model.SostavMaterialy</class>
+        <class>Sonya5.model.SostavTovary</class>
+        <class>Sonya5.model.Materialy</class>
+        <class>Sonya5.model.RasxodDeneg</class>
+        <class>Sonya5.model.FlexberryAdvLimit</class>
+        <class>Sonya5.model.NewPlatformFlexberryFlexberryUserSetting</class>
+        <class>Sonya5.model.NewPlatformFlexberryServicesLock</class>
+        <class>Sonya5.model.IISCaseberryLoggingObjectsApplicationLog</class>
+
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Регистр",
+  "name": "IISSonya5РегистрE",
+  "className": "РегистрE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sonya5-регистр",
+      "modelProjection": "РегистрE"
+    }
+  ]
+}

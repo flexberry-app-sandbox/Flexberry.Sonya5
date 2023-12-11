@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sonya5-расход-денег-e",
+  "editForm": "i-i-s-sonya5-расход-денег-e",
+  "external": false,
+  "caption": "Расход денег",
+  "name": "IISSonya5РасходДенегL",
+  "className": "РасходДенегL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sonya5-расход-денег",
+      "modelProjection": "РасходДенегL"
+    }
+  ]
+}

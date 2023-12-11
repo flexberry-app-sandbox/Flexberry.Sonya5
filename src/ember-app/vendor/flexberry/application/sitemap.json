@@ -1,0 +1,71 @@
+﻿{
+  "applicationCaption": "Sonya5",
+  "applicationTitle": "Sonya5",
+  "items": [
+    {
+      "link": null,
+      "menuName": "sonya5",
+      "caption": "Sonya5",
+      "title": "Sonya5",
+      "children": [
+        {
+          "link": "i-i-s-sonya5-клиенты-l",
+          "menuName": null,
+          "caption": "Клиенты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sonya5-поставщики-l",
+          "menuName": null,
+          "caption": "Поставщики",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sonya5-регистр-l",
+          "menuName": null,
+          "caption": "Регистр",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sonya5-товары-l",
+          "menuName": null,
+          "caption": "Товары",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sonya5-приход-денег-l",
+          "menuName": null,
+          "caption": "Приход денег",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sonya5-услуги-l",
+          "menuName": null,
+          "caption": "Услуги",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sonya5-материалы-l",
+          "menuName": null,
+          "caption": "Материалы",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sonya5-расход-денег-l",
+          "menuName": null,
+          "caption": "Расход денег",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
